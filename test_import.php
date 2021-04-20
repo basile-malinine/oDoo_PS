@@ -5,15 +5,15 @@
   $url = 'http://127.0.0.1:8069';
   $db = 'odoo14';
   $username = 'roo';
-  $password = '6grkyxnt';
+  $password = 'roo';
 
   $common = ripcord::client("{$url}/xmlrpc/2/common");
   $uid = $common->authenticate($db, $username, $password, ['interactive' => true]);
   $models = ripcord::client("{$url}/xmlrpc/2/object");
 
-  $models->execute_kw($db, $uid, $password, 'hotels.import_hz',
+  $result = $models->execute_kw($db, $uid, $password, 'hotels.import_hz',
       'import_test', [[], 'Hello, odoo!']);
-
+  print_r($result);
 
   exit();
 
