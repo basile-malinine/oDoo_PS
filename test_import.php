@@ -11,8 +11,24 @@
   $uid = $common->authenticate($db, $username, $password, ['interactive' => true]);
   $models = ripcord::client("{$url}/xmlrpc/2/object");
 
+  $new_hotel = [
+      'hotel' => [
+          'name' => 'Отель Вечный Зов',
+          'num_stars' => 'a',
+//          'city' => [
+//              0 => 1,
+//          ],
+          'address' => 'Народный проспект, дом 5, Измайлово',
+          'phone' => '+7 926 292 11 10',
+          'email' => '',
+//          'hotelier' => '',
+          'commission' => 12,
+          'hz_id' => 1000,
+      ],
+  ];
+
   $result = $models->execute_kw($db, $uid, $password, 'hotels.import_hz',
-      'import_test', [[], 'Hello, odoo!']);
+      'import_test', [[], $new_hotel]);
   print_r($result);
 
   exit();
@@ -51,6 +67,8 @@ function echoContacts()
     print_r($result);
     print_r(PHP_EOL);
 }
+
+
 
 echoContacts();
 echoHotels();
