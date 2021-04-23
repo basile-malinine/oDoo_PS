@@ -3,7 +3,8 @@
   require_once 'lib/ripcord-1.0/ripcord.php';
 
   $url = 'http://127.0.0.1:8069';
-  $db = 'odoo14';
+//  $db = 'odoo14';
+  $db = 'hotels';
   $username = 'roo';
   $password = 'roo';
 
@@ -11,25 +12,31 @@
   $uid = $common->authenticate($db, $username, $password, ['interactive' => true]);
   $models = ripcord::client("{$url}/xmlrpc/2/object");
 
-  $new_hotel = [
-      'hotel' => [
-          'name' => 'Отель Вечный Зов',
-          'num_stars' => 'a',
-//          'city' => [
-//              0 => 1,
-//          ],
-          'address' => 'Народный проспект, дом 5, Измайлово',
-          'phone' => '+7 926 292 11 10',
-          'email' => '',
-//          'hotelier' => '',
-          'commission' => 12,
-          'hz_id' => 1000,
-      ],
-  ];
+  $faker = Faker\Factory::create();
 
-  $result = $models->execute_kw($db, $uid, $password, 'hotels.import_hz',
-      'import_test', [[], $new_hotel]);
-  print_r($result);
+  for ($hz_id = 1007; $hz_id < 1108; $hz_id++) {
+    $new_hotel = [
+        'hotel' => [
+            'name' => $faker->company,
+            'num_stars' => 'a',
+            'city' => $faker->city,
+            'address' => $faker->address,
+            'phone' => $faker->phoneNumber,
+            'email' => $faker->email,
+            'hotelier' => $faker->firstName . ' ' . $faker->lastName,
+            'commission' => $faker->numberBetween(10, 15),
+            'hz_id' => $hz_id,
+        ],
+    ];
+
+    $result = $models->execute_kw($db, $uid, $password, 'hotels.import_hz',
+        'import_test', [[], $new_hotel]);
+    print_r($result);
+    print_r(PHP_EOL);
+  }
+//  $result = $models->execute_kw($db, $uid, $password, 'hotels.import_hz',
+//      'get_city_id', [[], 'Ленинград']);
+//  print_r($result);
 
   exit();
 
