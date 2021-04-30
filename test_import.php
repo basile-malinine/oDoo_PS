@@ -3,8 +3,8 @@
   require_once 'lib/ripcord-1.0/ripcord.php';
 
   $url = 'http://127.0.0.1:8069';
-  $db = 'odoo14';
-//  $db = 'hotels';
+//  $db = 'odoo14';
+  $db = 'hotel';
   $username = 'roo';
   $password = 'roo';
 
@@ -15,7 +15,7 @@
   $faker = Faker\Factory::create();
 
   // Иммитация экспорта Отелей
-  for ($hz_id = 1007; $hz_id < 1108; $hz_id++) {
+  for ($hz_id = 1000; $hz_id < 1099; $hz_id++) {
     $new_hotel = [
         'hotel' => [
             'name' => $faker->company,
