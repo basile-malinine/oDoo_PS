@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08322751-0eca-42b5-8dd2-e2f0fffd2ce7" name="Default Changelist" comment="Иммитация экспорта из HZ: Отели">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_import.php" beforeDir="false" afterPath="$PROJECT_DIR$/test_import.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +16,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -42,14 +42,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.test_import">
+  <component name="RunManager" selected="PHP Script.test">
     <configuration name="test" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/test.php">
       <CommandLine>
         <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 7.3" />
+          <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
       <method v="2" />
@@ -83,7 +83,14 @@
       <workItem from="1615248046968" duration="26000" />
       <workItem from="1615280025325" duration="4918000" />
       <workItem from="1618913479938" duration="21700000" />
-      <workItem from="1619123069442" duration="23987000" />
+      <workItem from="1619123069442" duration="24216000" />
+      <workItem from="1619253748136" duration="3369000" />
+      <workItem from="1619309262238" duration="84000" />
+      <workItem from="1619334586490" duration="1459000" />
+      <workItem from="1619466163091" duration="25950000" />
+      <workItem from="1619525666971" duration="16364000" />
+      <workItem from="1619575190969" duration="45203000" />
+      <workItem from="1619769871334" duration="6648000" />
     </task>
     <task id="LOCAL-00001" summary="Иммитация экспорта из HZ: Отели">
       <created>1619171308049</created>
@@ -92,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619171308049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Иммитация экспорта из HZ: Отели">
+      <created>1619183758296</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619183758296</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +117,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
